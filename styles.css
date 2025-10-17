@@ -1,0 +1,79 @@
+/* Reset y tipografía */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#123;overflow-x:hidden}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Fondo difuminado y hero animado */
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(135deg, rgba(240,248,255,0.95), rgba(220,235,255,0.9));}
+body::after{content:"";position:fixed;left:-10%;top:-10%;width:60vmax;height:60vmax;border-radius:50%;filter:blur(100px);opacity:.25;background:linear-gradient(90deg,#dff4ff00,#cfe9ff55);z-index:-3;}
+.hero-bg{position:absolute;inset:0;z-index:-1;background: radial-gradient(circle at 30% 30%, #dff4ff 0%, #aee0ff 70%);animation: moveBg 15s infinite alternate;}
+@keyframes moveBg{0%{background-position:0 0;}50%{background-position:50% 20%;}100%{background-position:0 0;}}
+
+/* Header */
+.site-header{backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem}
+.logo{font-weight:700;text-decoration:none;color:#0b3b5a}
+.nav{display:flex;gap:1rem}
+.nav-link{padding:.5rem .8rem;border-radius:10px;text-decoration:none;color:#03314d;transition:transform .18s ease,box-shadow .18s ease}
+.nav-link:hover{transform:translateY(-6px);box-shadow:0 10px 20px rgba(5,50,80,.08)}
+.menu-btn{display:none;border:none;background:none;font-size:1.4rem;cursor:pointer}
+
+/* Hero */
+.hero{padding:4rem 0;position:relative;overflow:hidden}
+.hero-inner{display:flex;gap:2rem;align-items:center;justify-content:center}
+.hero-card{flex:1;padding:2rem;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));box-shadow:0 8px 30px rgba(10,40,80,0.06);transition:transform .28s cubic-bezier(.2,.9,.3,1),box-shadow .28s ease}
+.church-name{font-size:1.9rem;color:#063650;margin-bottom:.25rem}
+.tagline{color:#235;opacity:.9;margin-bottom:1rem}
+.hero-actions{display:flex;gap:.75rem}
+.btn{padding:.6rem 1rem;border-radius:10px;border:none;background:#0b5f87;color:#fff;cursor:pointer;box-shadow:0 8px 18px rgba(11,95,135,0.12);transition:transform .18s ease,box-shadow .18s ease}
+.btn:hover{transform:translateY(-6px);box-shadow:0 0 12px rgba(11,95,135,0.3)}
+.btn.ghost{background:transparent;border:1px solid rgba(11,95,135,0.12);color:#0b5f87}
+
+/* Sections */
+.section{padding:3rem 0}
+.section h2{margin-bottom:1rem;color:#07364a}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:#fff;padding:1.25rem;border-radius:14px;box-shadow:0 8px 24px rgba(6,40,60,0.05);transition:transform .28s cubic-bezier(.2,.9,.3,1),box-shadow .28s ease}
+.photo-placeholder, .church-photo{height:180px;border-radius:10px;background:linear-gradient(180deg,#f6f9fc,#eaf7ff);display:flex;align-items:center;justify-content:center;color:#567;margin-bottom:0.5rem}
+.church-bio, .small{color:#345;font-size:.95rem}
+.muted{color:#274}
+.editable{min-height:50px;}
+
+/* Eventos */
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.event{height:160px;border-radius:12px;background:linear-gradient(135deg,#fff,#f4fbff);display:flex;align-items:center;justify-content:center}
+
+/* Contacto */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-card .social-row{display:flex;gap:.5rem;margin-bottom:.75rem}
+.social-icon, .social-link{display:inline-flex;gap:.5rem;align-items:center;text-decoration:none;color:#035;padding:.4rem .6rem;border-radius:8px;border:1px solid rgba(5,60,90,.06)}
+.map-card{min-height:160px}
+
+/* Footer */
+.site-footer{padding:1.25rem 0;text-align:center;color:#234}
+.footer-quote{font-style:italic;color:#123;opacity:.75;margin-top:.5rem}
+
+/* Levitate animation */
+.card-levitate{transition:transform .28s cubic-bezier(.2,.9,.3,1),box-shadow .28s ease}
+.card-levitate:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(6,40,60,0.09)}
+
+/* Scroll fade */
+.card, .event, .photo-placeholder, .church-photo{opacity:0; transform:translateY(30px); transition:all .6s ease}
+.in-view{opacity:1; transform:translateY(0);}
+
+/* Menú móvil */
+@media(max-width:900px){
+  .hero-inner{flex-direction:column}
+  .hero-card{width:90%}
+  .card-grid{grid-template-columns:1fr}
+  .events-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none;flex-direction:column;background:rgba(255,255,255,0.95);position:absolute;top:60px;right:1rem;padding:1rem;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+  .nav.open{display:flex}
+  .menu-btn{display:block}
+  .menu-btn.open{transform:rotate(90deg);transition:.2s ease;}
+}
+
+/* Keyframes */
+@keyframes fadeDown{from{opacity:0; transform:translateY(-10px);}to{opacity:1; transform:translateY(0);}}

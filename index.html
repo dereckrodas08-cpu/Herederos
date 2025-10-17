@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Herederos del Nuevo Pacto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Herederos del Nuevo Pacto</a>
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#sobre" class="nav-link">Sobre Nosotros</a>
+        <a href="#ministerios" class="nav-link">Ministerios</a>
+        <a href="#eventos" class="nav-link">Eventos</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-inner container">
+        <div class="hero-card card-levitate">
+          <h1 class="church-name">Herederos del Nuevo Pacto</h1>
+          <p class="tagline" id="tagline">&nbsp;<!-- espacio para tu frase --></p>
+          <div class="hero-actions">
+            <button class="btn" data-target="#sobre">Sobre nosotros</button>
+            <button class="btn ghost" data-target="#contacto">Contáctanos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre" class="section">
+      <div class="container section-inner">
+        <h2>Sobre Nosotros</h2>
+
+        <div class="card-grid">
+          <!-- Nuestra Iglesia -->
+          <div class="card card-levitate">
+            <h3>Nuestra Iglesia</h3>
+            <div class="church-photo" id="churchPhoto">Foto de la iglesia</div>
+            <p class="church-bio">&nbsp;<!-- espacio para biografía de la iglesia --></p>
+          </div>
+
+          <!-- Pastores -->
+          <div class="card card-levitate">
+            <div class="photo-placeholder" id="pastorPhoto">Foto de los pastores</div>
+            <h3 class="muted">Nombre de los Pastores</h3>
+            <p class="small">(Escribe los nombres aquí)</p>
+          </div>
+
+          <!-- Misión y Visión -->
+          <div class="card card-levitate">
+            <h3>Misión</h3>
+            <p class="editable">&nbsp;<!-- espacio para misión --></p>
+            <hr />
+            <h3>Visión</h3>
+            <p class="editable">&nbsp;<!-- espacio para visión --></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministerios -->
+    <section id="ministerios" class="section">
+      <div class="container">
+        <h2>Ministerios</h2>
+        <div class="card-grid">
+          <div class="card card-levitate">
+            <h3>Ministerio de Jóvenes</h3>
+            <p>Resumen corto sobre el ministerio.</p>
+            <a class="social-link" href="https://www.tiktok.com/@jovenes.herederos?_t=ZM-90bpZSyc4i4&_r=1" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 3v10.5A4.5 4.5 0 1 0 13.5 18V8h3V3h-7.5z"/></svg>
+              Encuéntranos en TikTok
+            </a>
+          </div>
+          <div class="card card-levitate">
+            <h3>Ministerio de Servicio</h3>
+            <p>Resumen del ministerio de servicio.</p>
+            <a class="social-link" href="https://www.facebook.com/share/1LfxXmMnGs/" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12H22v0z"/></svg>
+              Encuéntranos en Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section id="eventos" class="section">
+      <div class="container">
+        <h2>Eventos</h2>
+        <div class="events-grid">
+          <div class="event card-levitate">Imagen del evento 1</div>
+          <div class="event card-levitate">Imagen del evento 2</div>
+          <div class="event card-levitate">Imagen del evento 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <div class="contact-grid">
+          <div class="card card-levitate contact-card">
+            <h3>Encuéntranos aquí</h3>
+            <div class="social-row">
+              <a class="social-icon" href="https://www.tiktok.com/@jovenes.herederos?_t=ZM-90bpZSyc4i4&_r=1" target="_blank">TikTok</a>
+              <a class="social-icon" href="https://www.facebook.com/share/1LfxXmMnGs/" target="_blank">Facebook</a>
+            </div>
+            <p>Teléfono: <span class="phone-placeholder">(escribe el número aquí)</span></p>
+            <button class="btn" id="backBtn">Volver arriba</button>
+          </div>
+          <div class="card card-levitate map-card">
+            <h3>Dirección</h3>
+            <p class="small">Agrega la dirección aquí</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Herederos del Nuevo Pacto — Todos los derechos reservados</p>
+      <p class="footer-quote">“Porque donde dos o tres se reúnen en mi nombre, allí estoy yo”</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
