@@ -41,30 +41,24 @@
     <section id="sobre" class="section">
       <div class="container section-inner">
         <h2>Sobre Nosotros</h2>
-
         <div class="card-grid">
-          <!-- Nuestra Iglesia -->
           <div class="card card-levitate">
             <h3>Nuestra Iglesia</h3>
             <div class="church-photo" id="churchPhoto">Foto de la iglesia</div>
             <p class="church-bio">&nbsp;2013: Año en el que salimos de la organizacion en la cual perteneciamos, pero por cambios doctrinales y por llamado del señor a los Padres Ministeriales se tomo la decision de fundas el nuevo ministerio.</p>
             <p class="church-bio">&nbsp;2014: Año en que se realiza la primera campaña evangelica en lacolonia santa fe en comayaguela, la cual hasta el dia de hoy se mantiene como la casa paterna.</p>
           </div>
-
-          <!-- Pastores -->
           <div class="card card-levitate">
-            <div class="photo-placeholder" id="pastorPhoto">Pastores.png</div>
-            <h3 class="muted">Nombre de los Pastores</h3>
+            <div class="photo-placeholder" id="pastorPhoto"><img src="Pastores.png" class="church-photo" alt="churchPhoto"></div>
+            <h3 class="muted">Nuestros Pastores</h3>
             <p class="small">(Escribe los nombres aquí)</p>
           </div>
-
-          <!-- Misión y Visión -->
           <div class="card card-levitate">
             <h3>Misión</h3>
-            <p class="editable">&nbsp;Sembrando la semilla del reino de los cielos sobre la nacion</p>
+            <p class="editable">&nbsp;Sembrando la semilla del reino de los cielos sobre la nacion.</p>
             <hr />
             <h3>Visión</h3>
-            <p class="editable">&nbsp;Transforma generaciones por medio del espiritu santo para llevar a cabo el cumplimiento del proposito en Dios. 2 corintios 3:6</p>
+            <p class="editable">&nbsp;Transforma generaciones por medio del espiritu santo para llevar a cabo el cumplimiento del proposito en Dios. 2 corintios 3:6.</p>
           </div>
         </div>
       </div>
@@ -78,31 +72,32 @@
           <div class="card card-levitate">
             <h3>Ministerio de Jóvenes</h3>
             <p>Resumen corto sobre el ministerio.</p>
-            <a class="social-link" href="https://www.tiktok.com/@jovenes.herederos?_t=ZM-90bpZSyc4i4&_r=1" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 3v10.5A4.5 4.5 0 1 0 13.5 18V8h3V3h-7.5z"/></svg>
-              Encuéntranos en TikTok
-            </a>
+            <a class="social-link" href="https://www.tiktok.com/@jovenes.herederos?_t=ZM-90bpZSyc4i4&_r=1" target="_blank" rel="noopener noreferrer">TikTok</a>
           </div>
           <div class="card card-levitate">
             <h3>Ministerio de Servicio</h3>
             <p>Resumen del ministerio de servicio.</p>
-            <a class="social-link" href="https://www.facebook.com/share/1LfxXmMnGs/" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12H22v0z"/></svg>
-              Encuéntranos en Facebook
-            </a>
+            <a class="social-link" href="https://www.facebook.com/share/1LfxXmMnGs/" target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Eventos -->
+    <!-- 🎠 EVENTOS (carrusel de imágenes) -->
     <section id="eventos" class="section">
       <div class="container">
         <h2>Eventos</h2>
-        <div class="events-grid">
-          <div class="event card-levitate">Imagen del evento 1</div>
-          <div class="event card-levitate">Imagen del evento 2</div>
-          <div class="event card-levitate">Imagen del evento 3</div>
+
+        <div class="carousel-container">
+          <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+          <div class="carousel-track" id="carouselTrack">
+            <img src="img/evento1.jpg" class="event-img" alt="Evento 1">
+            <img src="img/evento2.jpg" class="event-img" alt="Evento 2">
+            <img src="img/evento3.jpg" class="event-img" alt="Evento 3">
+            <img src="img/evento4.jpg" class="event-img" alt="Evento 4">
+            <img src="img/evento5.jpg" class="event-img" alt="Evento 5">
+          </div>
+          <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
         </div>
       </div>
     </section>
@@ -123,7 +118,7 @@
           </div>
           <div class="card card-levitate map-card">
             <h3>Dirección</h3>
-            <p class="small">Colonia santa fe antiguo centro de salud al doblar de la iglesia catolica pasando ban pais</p>
+            <p class="small">Agrega la dirección aquí</p>
           </div>
         </div>
       </div>
@@ -140,6 +135,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
