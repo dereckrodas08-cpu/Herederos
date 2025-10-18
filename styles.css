@@ -66,7 +66,7 @@ body::after{content:"";position:fixed;left:-10%;top:-10%;width:60vmax;height:60v
 @media(max-width:900px){
   .hero-inner{flex-direction:column}
   .hero-card{width:90%}
-  .card-grid{grid-template-columns:1fr}
+  .card-grid{grid-template-columns:1fr} 
   .events-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   .nav{display:none;flex-direction:column;background:rgba(255,255,255,0.95);position:absolute;top:60px;right:1rem;padding:1rem;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.1)}
@@ -77,3 +77,62 @@ body::after{content:"";position:fixed;left:-10%;top:-10%;width:60vmax;height:60v
 
 /* Keyframes */
 @keyframes fadeDown{from{opacity:0; transform:translateY(-10px);}to{opacity:1; transform:translateY(0);}}
+/* --- AÑADIDO: estilos del CARRUCEL (solo esto se agregó) --- */
+
+/* Contenedor del carrusel */
+.carousel-container{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  margin-top:1rem;
+  background:transparent;
+}
+
+/* Pista / track del carrusel */
+.carousel-track{
+  display:flex;
+  gap:16px;
+  transition:transform .5s ease;
+  will-change:transform;
+  padding:12px;
+}
+
+/* estilos para cada imagen en el carrusel (usa tus <img class="event-img">) */
+.event-img{
+  flex:0 0 100%;
+  width:100%;
+  height:340px;
+  object-fit:contain; /* muestra la imagen completa dentro del marco sin recortarla */
+  border-radius:12px;
+  background:#f8fcff;
+  display:block;
+}
+
+/* Si prefieres que rellene y recorte, cambia a object-fit:cover */
+
+/* Botones del carrusel */
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#0b5f87;
+  color:#fff;
+  border:none;
+  padding:.5rem .75rem;
+  border-radius:50%;
+  cursor:pointer;
+  opacity:0.9;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.carousel-btn:hover{opacity:1;transform:scale(1.03)}
+.carousel-btn.prev{left:10px}
+.carousel-btn.next{right:10px}
+
+/* responsive adjustments */
+@media(max-width:900px){
+  .event-img{height:220px}
+  .carousel-track{gap:12px;padding:8px}
+}
